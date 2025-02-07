@@ -85,7 +85,7 @@ if pdf_file:
         st.warning("Could not extract text from the PDF. It may be an image-based PDF.")
 
 # 💬 AI Chatbot Section
-st.subheader("💬 Chat with AI (Mixtral-8x7b-32768)")
+st.subheader("💬 Chat with AI ")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -126,7 +126,7 @@ if prompt := st.chat_input("Ask anything..."):
 
 # Sidebar info
 st.sidebar.title("ℹ️ About")
-st.sidebar.info("This app uses a trained DNN model to predict breast cancer from images and includes a chatbot powered by Mixtral-8x7b-32768.")
+st.sidebar.info("This app uses a trained DNN model to predict breast cancer from images and includes a chatbot.")
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("💡 **Made with ❤️ using Streamlit & Groq API**")
