@@ -12,6 +12,20 @@ from groq import Groq
 st.set_page_config(page_title="DNN Prediction & AI Chatbot", page_icon="🤖", layout="wide")
 st.title("🧠 DNN Breast Cancer Prediction & AI Chatbot 🤖")
 
+# Sidebar Configuration
+st.sidebar.title("🌟 Welcome to MedAI 🌟")
+st.sidebar.markdown("""
+**Your Smart Medical Companion!** 🤖🩺
+
+### 🚀 Capabilities:
+- **📊 Summarize Medical PDFs & YouTube Lectures**
+- **🩻 Detect Breast Cancer from Mammograms**
+- **🦠 Diagnose Malaria from Blood Smears**
+- **💬 Medical Q&A Chat Support**
+
+Stay healthy with AI-powered insights! 💡
+""")
+
 # Load the trained model
 MODEL_PATH = "model.h5"
 try:
@@ -22,7 +36,6 @@ except Exception as e:
 
 # Set API key directly (if not using .env)
 GROQ_API_KEY = "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"
-
 
 # Groq API Client
 client = Groq(api_key=GROQ_API_KEY)
@@ -124,9 +137,6 @@ if prompt := st.chat_input("Ask anything..."):
 
     st.session_state.messages.append({"role": "assistant", "content": full_response})
 
-# Sidebar info
-st.sidebar.title("ℹ️ About")
-st.sidebar.info("This app uses a trained DNN model to predict breast cancer from images and includes a chatbot.")
-
+# Sidebar Footer
 st.sidebar.markdown("---")
-st.sidebar.markdown("💡 **Made with ❤️ using Streamlit & Groq API**")
+st.sidebar.info("💡 **Made with ❤️ by Harsh Jain**")
