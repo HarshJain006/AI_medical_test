@@ -9,7 +9,7 @@ import os
 from groq import Groq
 
 # Set up Streamlit page
-st.set_page_config(page_title="DNN Prediction & AI Chatbot", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="AI MEDICAL DIAGNOSIS CHATBOT ", page_icon="🤖", layout="wide")
 st.title("🧠 DNN Breast Cancer Prediction & AI Chatbot 🤖")
 
 # Sidebar Configuration
