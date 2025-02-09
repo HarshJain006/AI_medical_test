@@ -10,7 +10,7 @@ from groq import Groq
 
 # Set up Streamlit page
 st.set_page_config(page_title="AI MEDICAL DIAGNOSIS CHATBOT ", page_icon="🤖", layout="wide")
-st.title("🧠 DNN Breast Cancer Prediction & AI Chatbot 🤖")
+st.title("🧠 AI MEDICAL DIAGNOSIS CHATBOT 🤖")
 
 # Sidebar Configuration
 st.sidebar.title("🌟 Welcome to MedAI 🌟")
