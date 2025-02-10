@@ -9,22 +9,21 @@ import os
 from groq import Groq
 
 # Set up Streamlit page
-st.set_page_config(page_title="AI MEDICAL DIAGNOSIS CHATBOT ", page_icon="🤖", layout="wide")
-st.title("🧠 AI MEDICAL DIAGNOSIS CHATBOT 🤖")
-
-# Sidebar Configuration
-st.sidebar.title("🌟 Welcome to MedAI 🌟")
+st.set_page_config(page_title="DNN Prediction & AI Chatbot", page_icon="🤖", layout="wide")
+st.title("🧠 DNN Breast Cancer Prediction & AI Chatbot 🤖")
+st.sidebar.header("About MedAI")
 st.sidebar.markdown("""
-**Your Smart Medical Companion!** 🤖🩺
+**Welcome to MedAI!** 🤖🩺
 
-### 🚀 Capabilities:
-- **📊 Summarize Medical PDFs & YouTube Lectures**
-- **🩻 Detect Breast Cancer from Mammograms**
-- **🦠 Diagnose Malaria from Blood Smears**
-- **💬 Medical Q&A Chat Support**
+Capabilities:
+- 📊 Summarize Medical PDFs & YouTube Lectures
+- 🩻 Detect Breast Cancer from Mammograms
+- 🦠 Diagnose Malaria from Blood Smears
+- 💬 Medical Q&A Chat Support
 
-Stay healthy with AI-powered insights! 💡
+Your smart medical companion!
 """)
+
 
 # Load the trained model
 MODEL_PATH = "model.h5"
@@ -35,7 +34,8 @@ except Exception as e:
     st.sidebar.error(f"❌ Error Loading Model: {e}")
 
 # Set API key directly (if not using .env)
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
+
 
 # Groq API Client
 client = Groq(api_key=GROQ_API_KEY)
@@ -137,6 +137,9 @@ if prompt := st.chat_input("Ask anything..."):
 
     st.session_state.messages.append({"role": "assistant", "content": full_response})
 
-# Sidebar Footer
+# Sidebar info
+st.sidebar.title("ℹ️ About")
+st.sidebar.info("This app uses a trained DNN model to predict breast cancer from images and includes a chatbot.")
+
 st.sidebar.markdown("---")
-st.sidebar.info("💡 **Made with ❤️ by Harsh Jain**")
+st.sidebar.markdown("💡 **Made by Harsh Jain ❤️**")
