@@ -35,7 +35,7 @@ except Exception as e:
     st.sidebar.error(f"❌ Error Loading Model: {e}")
 
 # Set API key directly (if not using .env)
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 
 # Groq API Client
 client = Groq(api_key=GROQ_API_KEY)
